@@ -62,7 +62,7 @@ export default function Astrophotography() {
       </p>
 
       <div className="table-wrap">
-        <table>
+        <table style={{ minWidth: '46rem' }}>
           <thead>
             <tr>
               <th>Starter level</th>

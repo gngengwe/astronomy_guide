@@ -42,7 +42,7 @@ export default function Home() {
       </p>
 
       <div className="table-wrap">
-        <table>
+        <table style={{ minWidth: '42rem' }}>
           <thead>
             <tr>
               <th>Week</th>

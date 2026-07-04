@@ -64,7 +64,7 @@ export default function Telescopes() {
 
       <h2>Telescope types compared for beginners</h2>
       <div className="table-wrap">
-        <table>
+        <table style={{ minWidth: '58rem' }}>
           <thead>
             <tr>
               <th>Type</th>
