@@ -12,7 +12,7 @@ const NAV_LINKS = [
 
 function navClass({ isActive }) {
   return [
-    'px-3 py-2 rounded-md text-sm transition-colors whitespace-nowrap',
+    'px-2.5 py-2 rounded-md text-sm transition-colors whitespace-nowrap',
     isActive
       ? 'bg-space-700 text-star-300'
       : 'text-mist-400 hover:text-mist-300 hover:bg-space-800',
@@ -29,15 +29,15 @@ export default function Layout() {
   return (
     <div className="min-h-screen flex flex-col">
       <header className="sticky top-0 z-20 border-b border-space-700 bg-space-950/85 backdrop-blur">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 gap-4">
             <NavLink to="/" className="flex items-center gap-2 shrink-0">
               <span aria-hidden="true" className="text-xl">✦</span>
-              <span className="font-display text-star-300 text-lg tracking-tight">
+              <span className="font-display text-star-300 text-base sm:text-lg tracking-tight whitespace-nowrap">
                 Starting Out Under the Stars
               </span>
             </NavLink>
-            <nav className="flex items-center gap-1 overflow-x-auto">
+            <nav className="no-scrollbar flex items-center gap-1 overflow-x-auto">
               {NAV_LINKS.map((link) => (
                 <NavLink key={link.to} to={link.to} end={link.end} className={navClass}>
                   {link.label}
