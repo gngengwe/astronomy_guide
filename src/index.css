@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@theme {
+  --color-space-950: #05070f;
+  --color-space-900: #0b1026;
+  --color-space-800: #131a34;
+  --color-space-700: #1c2444;
+  --color-space-600: #2a3560;
+  --color-mist-300: #cfcfe0;
+  --color-mist-400: #a8a4c0;
+  --color-star-300: #fdf6e3;
+  --color-gold-400: #e8a33d;
+  --color-gold-300: #f0bd6b;
+  --color-nebula-400: #6fd6ff;
+  --color-nebula-300: #9fe6ff;
+
+  --font-display: "Georgia", "Iowan Old Style", serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-space-950);
+  color: var(--color-mist-300);
+  font-family: var(--font-body);
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.55), transparent),
+    radial-gradient(1px 1px at 65% 15%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1.5px 1.5px at 85% 60%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1px 1px at 40% 80%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1px 1px at 10% 65%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1.5px 1.5px at 55% 45%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1px 1px at 92% 25%, rgba(255,255,255,0.45), transparent);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* Long-form content typography, used across guide pages */
+.content h2 {
+  font-family: var(--font-display);
+  color: var(--color-star-300);
+  font-size: 1.6rem;
+  letter-spacing: -0.01em;
+  margin: 2.75rem 0 1rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.content h2:first-child {
+  margin-top: 0;
+}
+
+.content h3 {
+  font-family: var(--font-display);
+  color: var(--color-gold-300);
+  font-size: 1.2rem;
+  margin: 2rem 0 0.75rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.content p {
+  line-height: 1.75;
+  margin: 0 0 1.1rem;
+}
+
+.content ul,
+.content ol {
+  line-height: 1.75;
+  margin: 0 0 1.1rem;
+  padding-left: 1.4rem;
+}
+
+.content li {
+  margin-bottom: 0.4rem;
+}
+
+.content li > p {
+  margin: 0;
+}
+
+.content strong {
+  color: var(--color-star-300);
+  font-weight: 600;
+}
+
+.content a {
+  color: var(--color-nebula-300);
+  text-decoration: underline;
+  text-decoration-color: rgba(159, 230, 255, 0.35);
+  text-underline-offset: 2px;
+}
+
+.content a:hover {
+  text-decoration-color: rgba(159, 230, 255, 0.9);
+}
+
+.content .table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.5rem;
+  border: 1px solid var(--color-space-600);
+  border-radius: 0.5rem;
+}
+
+.content table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 32rem;
+  font-size: 0.92rem;
+}
+
+.content th {
+  text-align: left;
+  background: var(--color-space-800);
+  color: var(--color-gold-300);
+  font-weight: 600;
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--color-space-600);
+  white-space: nowrap;
+}
+
+.content td {
+  padding: 0.65rem 0.9rem;
+  border-bottom: 1px solid var(--color-space-700);
+  vertical-align: top;
+}
+
+.content tr:last-child td {
+  border-bottom: none;
+}
+
+.content pre {
+  background: var(--color-space-900);
+  border: 1px solid var(--color-space-600);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--color-nebula-300);
+  margin: 0 0 1.5rem;
+}
+
+.content blockquote {
+  margin: 0 0 1.5rem;
+  padding: 0.9rem 1.25rem;
+  border-left: 3px solid var(--color-gold-400);
+  background: rgba(232, 163, 61, 0.08);
+  border-radius: 0 0.4rem 0.4rem 0;
+}
+
+.content blockquote p:last-child {
+  margin-bottom: 0;
+}
