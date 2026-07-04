@@ -1,13 +1,17 @@
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
+import Figure from '../components/Figure'
+import { IMAGES } from '../data/images'
 
 export default function Astrophotography() {
   return (
-    <div className="content">
-      <PageHeader
+    <>
+      <Hero
+        image={IMAGES.astrophotographyHero}
         eyebrow="Part three"
         title="Astrophotography 101"
         subtitle="Treat imaging as its own skill set — start with gear you already own, then upgrade deliberately."
       />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 content">
 
       <h2>What astrophotography is and the main branches to know</h2>
       <p>
@@ -148,6 +152,12 @@ export default function Astrophotography() {
         telescope images can work very well for the Moon — one reason lunar
         photography is such an ideal first astrophotography project.
       </p>
+
+      <Figure
+        image={IMAGES.astrophotographyMoon}
+        caption="A supermoon rising during a partial lunar eclipse — the kind of bright, forgiving target that makes the Moon the ideal first astrophotography project."
+      />
+
       <p>
         For <strong>Milky Way</strong> and wide-field work, tripod imaging can be
         enough at first. About 20 seconds is a practical starting point for keeping
@@ -180,6 +190,7 @@ export default function Astrophotography() {
         within what your setup can support, bring spare batteries, and think about dew
         before you lose a session to it.
       </p>
-    </div>
+      </div>
+    </>
   )
 }

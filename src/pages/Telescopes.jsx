@@ -1,13 +1,17 @@
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
+import Figure from '../components/Figure'
+import { IMAGES } from '../data/images'
 
 export default function Telescopes() {
   return (
-    <div className="content">
-      <PageHeader
+    <>
+      <Hero
+        image={IMAGES.telescopesHero}
         eyebrow="Part two"
         title="Telescopes 101"
         subtitle="What the specs actually mean, how the main designs compare, and how to make a good first-equipment decision."
       />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 content">
 
       <h2>A short history that matters to beginners</h2>
       <p>
@@ -29,6 +33,11 @@ export default function Telescopes() {
         Schmidt-Cassegrains and Maksutov-Cassegrains became popular because they pack
         long focal lengths into short tubes.
       </p>
+
+      <Figure
+        image={IMAGES.telescopesJupiter}
+        caption="What more aperture and resolution can reveal: fine detail in Jupiter's Great Red Spot."
+      />
 
       <h2>The optical basics that actually matter in use</h2>
       <p>
@@ -188,6 +197,7 @@ export default function Telescopes() {
         perfect for visual astronomy and deep-sky astrophotography, and skipping
         sky-learning entirely. Those mistakes are more common than bad optics.
       </p>
-    </div>
+      </div>
+    </>
   )
 }

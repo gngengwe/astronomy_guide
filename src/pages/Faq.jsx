@@ -1,4 +1,5 @@
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
+import { IMAGES } from '../data/images'
 
 const FAQS = [
   {
@@ -37,12 +38,14 @@ const FAQS = [
 
 export default function Faq() {
   return (
-    <div className="content">
-      <PageHeader
+    <>
+      <Hero
+        image={IMAGES.faqHero}
         eyebrow="Part five"
         title="FAQ & Next Steps"
         subtitle="Common beginner questions, and a sequential path into intermediate-level astronomy."
       />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 content">
 
       <h2>Frequently asked questions</h2>
       <div className="space-y-6 mb-8">
@@ -103,6 +106,7 @@ export default function Faq() {
           slowly</strong>.
         </p>
       </blockquote>
-    </div>
+      </div>
+    </>
   )
 }

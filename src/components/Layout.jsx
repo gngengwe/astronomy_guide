@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, Outlet, useLocation } from 'react-router-dom'
+import Starfield from './Starfield'
 
 const NAV_LINKS = [
   { to: '/', label: 'Home', end: true },
@@ -39,6 +40,7 @@ export default function Layout() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Starfield />
       <header className="sticky top-0 z-20 border-b border-space-700 bg-space-950/85 backdrop-blur">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex items-center justify-between h-16 gap-3">
@@ -96,7 +98,7 @@ export default function Layout() {
         )}
       </header>
 
-      <main className="flex-1 w-full max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <main className="flex-1 w-full">
         <Outlet />
       </main>
 

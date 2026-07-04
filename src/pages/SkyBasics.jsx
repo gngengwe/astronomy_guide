@@ -1,13 +1,18 @@
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
+import Figure from '../components/Figure'
+import Gallery from '../components/Gallery'
+import { IMAGES } from '../data/images'
 
 export default function SkyBasics() {
   return (
-    <div className="content">
-      <PageHeader
+    <>
+      <Hero
+        image={IMAGES.skyBasicsHero}
         eyebrow="Part one"
         title="Navigating the Night Sky"
         subtitle="Coordinates, the Moon and planets, constellations, and the tools that help you plan an observing session."
       />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 content">
 
       <h2>Sky basics that make everything else easier</h2>
       <p>
@@ -64,6 +69,12 @@ Horizon  ------*---+----------------
         waxing crescent, first quarter, waxing gibbous, full, waning gibbous, third
         quarter, and waning crescent.
       </p>
+
+      <Figure
+        image={IMAGES.moonPhases}
+        caption="The Moon in its waning gibbous phase. As it orbits Earth, we see a different portion of its sunlit half — the cycle behind all eight phases."
+      />
+
       <p>
         For Solar System basics, a beginner only needs a clean hierarchy: the{' '}
         <strong>Sun</strong> is the star at the center; eight major planets orbit it;
@@ -125,6 +136,14 @@ Horizon  ------*---+----------------
         depending on sky quality.
       </p>
 
+      <Gallery
+        items={[
+          IMAGES.galleryOrion,
+          IMAGES.galleryPleiades,
+          IMAGES.galleryAndromeda,
+        ]}
+      />
+
       <h2>Star charts, observing plans, and light pollution</h2>
       <p>
         A sky chart becomes easy once you know what problem it solves: it tells you{' '}
@@ -163,6 +182,7 @@ Horizon  ------*---+----------------
         <strong>WorldWide Telescope</strong>, <strong>ESASky</strong>, and{' '}
         <strong>NASA's Eyes on the Solar System</strong>.
       </p>
-    </div>
+      </div>
+    </>
   )
 }

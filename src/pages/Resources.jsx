@@ -1,4 +1,5 @@
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
+import { IMAGES } from '../data/images'
 
 const GLOSSARY = [
   ['Altitude', 'How high an object is above the horizon.'],
@@ -25,12 +26,14 @@ const GLOSSARY = [
 
 export default function Resources() {
   return (
-    <div className="content">
-      <PageHeader
+    <>
+      <Hero
+        image={IMAGES.resourcesHero}
         eyebrow="Part four"
         title="Resources & Glossary"
         subtitle="Curated tools, apps, books, channels, and plain-English definitions for the terms you'll run into."
       />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 content">
 
       <h2>Night-sky learning resources</h2>
       <ul>
@@ -211,6 +214,7 @@ export default function Resources() {
           </tbody>
         </table>
       </div>
-    </div>
+      </div>
+    </>
   )
 }

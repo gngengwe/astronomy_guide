@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom'
-import PageHeader from '../components/PageHeader'
+import Hero from '../components/Hero'
+import { IMAGES } from '../data/images'
 
 export default function Home() {
   return (
-    <div className="content">
-      <PageHeader
+    <>
+      <Hero
+        image={IMAGES.homeHero}
         eyebrow="A beginner's guide"
         title="Starting Out Under the Stars"
         subtitle="A practical, staged path into amateur astronomy and astrophotography — for someone with no telescope, no advanced math, and a simple goal of enjoying the sky."
       />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 py-10 sm:py-14 content">
 
       <h2>How this guide is organized</h2>
       <p>
@@ -160,6 +163,7 @@ export default function Home() {
           how to grow into an intermediate hobbyist.
         </li>
       </ul>
-    </div>
+      </div>
+    </>
   )
 }
